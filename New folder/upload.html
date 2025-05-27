@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RV Flix - Upload Video</title>
+    <style>
+        /* beautiful dark style css here */
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            padding: 40px;
+        }
+        form {
+            background: #1f1f1f;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+        }
+        input, textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #e50914;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff0a16;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Upload a New Video</h1>
+
+<form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Enter Video Title" required>
+    <textarea name="description" placeholder="Enter Description" rows="4" required></textarea>
+    <input type="file" name="video" accept="video/*" required>
+    <button type="submit">Upload Video</button>
+</form>
+
+</body>
+</html>

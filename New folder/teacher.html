@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RV Flix - Teacher Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            background: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            color: #e50914;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        main {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .upload-container {
+            margin-top: 30px;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input[type="file"], button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+        button {
+            background-color: #e50914;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #ff1b1b;
+        }
+    </style>
+</head>
+<body>
+
+<header>Welcome Teacher - RV Flix</header>
+
+<main>
+    <h2>Upload Your Teaching Videos</h2>
+    <div class="upload-container">
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="video" required><br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>
